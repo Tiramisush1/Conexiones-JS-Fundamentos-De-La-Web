@@ -30,19 +30,22 @@
                         <img src="img/user-circle.png" alt="jane-medium-avatar" class="avatar-m">
                     </div>
                     <div class="card-body">
-                        <h1>Jane Doe</h1>
+                        <h1 id="name">Jane Doe</h1>
                         <h3>
                             <img src="img/map-marker.png" alt="pin" class="icon-s"> 
                             Seattle
                         </h3>
                         <p>Developer | Engineer | Problem Solver<br>
                         Master of shadows and the Internet!</p>
-                        <p>
-                            <a href="#">
+
+
+                        <p class="edit">
+                            <a href="#" onclick="changeName()">
                                 <img src="img/gear.png" alt="gear" class="icon-s"> 
                                 edit profile
                             </a>
                         </p>
+
                     </div>
                 </div>
 
@@ -63,34 +66,34 @@
             <div class="col">
                 <div class="card">
                     <div class="header">
-                        <span class="connections">2</span>
-                        Connection Requests
+                        <span class="connections" id="connections-2">2</span>
+                        <h3>Connection Requests</h3>
                     </div>
-                    <div class="user-line">
+                    <div class="user-line" id="request">
                         <span class="start">
                             <img src="img/user-circle.png" alt="todd" class="avatar-s">
                             <span>Todd E.</span>
                         </span>
                         <span class="end">
-                            <img src="img/accept-circle.png" alt="accept" class="avatar-s">
-                            <img src="img/close-circle.png" alt="decline" class="avatar-s">
+                            <img src="img/accept-circle.png" alt="accept" class="avatar-s" onclick="removing(this)" id="accept">
+                            <img src="img/close-circle.png" alt="closes" class="avatar-s" onclick="removing(this)" id="closes">
                         </span>
                     </div>
-                    <div class="user-line">
+                    <div class="user-line" id="request">
                         <span class="start">
                             <img src="img/user-circle.png" alt="phil" class="avatar-s">
                             <span>Phil K.</span>
                         </span>
                         <span class="end">
-                            <img src="img/accept-circle.png" alt="accept" class="avatar-s">
-                            <img src="img/close-circle.png" alt="decline" class="avatar-s">
+                            <img src="img/accept-circle.png" alt="accept" class="avatar-s" onclick="removing(this)" id="accept">
+                            <img src="img/close-circle.png" alt="closes" class="avatar-s" onclick="removing(this)" id="closes">
                         </span>
                     </div>
                 </div>
                 <div class="card">
                     <div class="header">
-                        <span class="connections">500+</span>
-                        Your Connections
+                        <span class="connections" id="connections-500">428</span>
+                        <h3>Your Connections</h3>
                     </div>
                     <div class="user-line">
                         <span class="start">
@@ -124,4 +127,5 @@
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
